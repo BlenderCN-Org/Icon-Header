@@ -23,7 +23,7 @@ for currentModule in modulesFullNames:
 # MetaData Add-On Blender
 # -----------------------------------------------------------------------------
 bl_info = {
-    "name": "Grid Control",
+    "name": "Icon Header",
     "author": "stilobique",
     "version": (1, 0, 0),
     "blender": (2, 78),
