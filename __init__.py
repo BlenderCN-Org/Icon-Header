@@ -1,7 +1,4 @@
 import bpy
-from bpy.props import (BoolProperty,
-                       PointerProperty,
-                       )
 
 # -----------------------------------------------------------------------------
 # MetaData Add-On Blender
@@ -18,17 +15,6 @@ bl_info = {
     "category": "3D View",
     "tracker_url": "https://github.com/stilobique/Grid/issues",
 }
-
-# -----------------------------------------------------------------------------
-# Generate a Bool variable to on and Off Grid settings
-# -----------------------------------------------------------------------------
-class GridData(bpy.types.PropertyGroup):
-    grid_data = BoolProperty(
-        name = "Show/Hide Grid",
-        description = "Bolean to on or off the grid",
-        default = False
-    )
-
 
 # -----------------------------------------------------------------------------
 # Call operator
@@ -69,11 +55,8 @@ class GridControl(bpy.types.Operator):
 # -----------------------------------------------------------------------------
 def menu_func(self, context):
     layout = self.layout
-    scn = context.scene
-    grid = scn.my_tool
 
     layout.operator("view.grid_control", text='', icon='GRID')
-    # layout.prop(grid, "grid_data", text='', icon='GRID', toggle=True)
 
 
 # -----------------------------------------------------------------------------
