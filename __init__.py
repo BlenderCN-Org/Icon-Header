@@ -2,6 +2,7 @@ import bpy
 
 from .controllers.grid import GridControl
 from .controllers.location import CenterPivotMeshObj
+from .views.header import menu_func
 
 # -----------------------------------------------------------------------------
 # MetaData Add-On Blender
@@ -18,16 +19,6 @@ bl_info = {
     "category": "3D View",
     "tracker_url": "https://github.com/stilobique/Grid/issues",
 }
-
-# -----------------------------------------------------------------------------
-# Draw UI, use an function to be append into 3D View Header
-# -----------------------------------------------------------------------------
-def menu_func(self, context):
-    layout = self.layout
-
-    layout.operator("view.grid_control", text='', icon='GRID')
-    icon = 'LATTICE_DATA'
-    layout.operator("object.center_pivot_mesh_obj", text='', icon=icon)
 
 
 # -----------------------------------------------------------------------------
