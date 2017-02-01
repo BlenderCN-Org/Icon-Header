@@ -1,5 +1,8 @@
 import bpy
 
+from .controllers.grid import GridControl
+from .controllers.location import CenterPivotMeshObj
+
 # -----------------------------------------------------------------------------
 # MetaData Add-On Blender
 # -----------------------------------------------------------------------------
@@ -17,46 +20,14 @@ bl_info = {
 }
 
 # -----------------------------------------------------------------------------
-# Call operator
-# -----------------------------------------------------------------------------
-
-class GridControl(bpy.types.Operator):
-    """Tooltip"""
-    bl_idname = "view.grid_control"
-    bl_label = "Show and Hide Grid"
-
-    def execute(self, context):
-        area = None
-        for a in bpy.data.window_managers[0].windows[0].screen.areas:
-            if a.type == 'VIEW_3D':
-                area = a
-                break
-
-        if area:
-            space = area.spaces[0]
-        else:
-            space = bpy.context.space_data
-
-        if space.show_floor == True:
-            space.show_floor = False
-            space.show_axis_x = False
-            space.show_axis_y = False
-            # space.show_axis_z = False
-        else:
-            space.show_floor = True
-            space.show_axis_x = True
-            space.show_axis_y = True
-            # space.show_axis_z = True
-
-        return {'FINISHED'}
-
-# -----------------------------------------------------------------------------
 # Draw UI, use an function to be append into 3D View Header
 # -----------------------------------------------------------------------------
 def menu_func(self, context):
     layout = self.layout
 
     layout.operator("view.grid_control", text='', icon='GRID')
+    icon = 'LATTICE_DATA'
+    layout.operator("object.center_pivot_mesh_obj", text='', icon=icon)
 
 
 # -----------------------------------------------------------------------------
