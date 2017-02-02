@@ -39,17 +39,6 @@ bl_info = {
 # -----------------------------------------------------------------------------
 # Register all module and append UI in 3D View Header
 # -----------------------------------------------------------------------------
-# def register():
-#     bpy.utils.register_module(__name__)
-#     bpy.types.VIEW3D_HT_header.append(menu_func)
-#
-# def unregister():
-#     bpy.utils.unregister_module(__name__)
-#     bpy.types.VIEW3D_HT_header.remove(menu_func)
-
-# -----------------------------------------------------------------------------
-# Update register all methods to this addons
-# -----------------------------------------------------------------------------
 def register():
     for currentModule in modulesFullNames:
         if currentModule in sys.modules:
