@@ -5,10 +5,11 @@ import bpy
 # -----------------------------------------------------------------------------
 def menu_func(self, context):
     layout = self.layout
+    row = layout.row(align=True)
 
-    layout.operator("view.grid_control", text='', icon='GRID')
+    row.operator("view.grid_control", text='', icon='GRID')
     icon = 'LATTICE_DATA'
-    layout.operator("object.center_pivot_mesh_obj", text='', icon=icon)
+    row.operator("object.center_pivot_mesh_obj", text='', icon=icon)
 
 
 def register():
