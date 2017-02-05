@@ -8,8 +8,10 @@ def menu_func(self, context):
     row = layout.row(align=True)
 
     row.operator("view.grid_control", text='', icon='GRID')
-    icon = 'LATTICE_DATA'
+    icon = 'CURSOR'
     row.operator("object.center_pivot_mesh_obj", text='', icon=icon)
+    icon = 'SMOOTH'
+    row.operator("object.smooth_shading", text='', icon=icon)
 
 
 def register():
