@@ -7,6 +7,7 @@ modulesNames = [
     # Controllers
     'controllers.grid',
     'controllers.location',
+    'controllers.smooth',
     ]
 
 modulesFullNames = []
