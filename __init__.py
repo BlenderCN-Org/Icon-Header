@@ -26,7 +26,7 @@ for currentModule in modulesFullNames:
 bl_info = {
     "name": "Icon Header",
     "author": "stilobique",
-    "version": (1, 0, 0),
+    "version": (1, 2, 0),
     "blender": (2, 78),
     "location": "3D View > Header",
     "description": "Show or Hide your grid.",
