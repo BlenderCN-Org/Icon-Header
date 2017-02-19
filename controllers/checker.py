@@ -3,6 +3,7 @@ import bpy
 def tex_checker():
     # Variables
     pictures = bpy.data.images
+    all_obj = bpy.data.objects
     # Settings Textures Checker
     name = "Checker"
     size = 1024
@@ -19,14 +20,15 @@ def tex_checker():
         state = False
 
     # Activate Checker Texture to your UV active.
-    slct_obj = bpy.context.selected_objects
-    object = bpy.data.objects[slct_obj[0].name]
-    uv_map = object.data.uv_textures.active.data
-    for uv_face in uv_map:
-        uv_face.image = pictures[name]
+    for obj in all_obj:
+        object = bpy.data.objects[obj.name]
+        if object.type == 'MESH':
+            if object.data.uv_textures.active is not None:
+                uv_map = object.data.uv_textures.active.data
+                for uv_face in uv_map:
+                    uv_face.image = pictures[name]
 
-    return state
-
+    return
 
 
 class UVChecker(bpy.types.Operator):
@@ -48,11 +50,7 @@ class UVChecker(bpy.types.Operator):
 
         if space.show_textured_solid == True:
             space.show_textured_solid = False
-            # Check if a Checker as exist
-
-            # Generate a Checker Picture
-            # tex_checker()
-            print(tex_checker())
+            tex_checker()
         else:
             space.show_textured_solid = True
 
