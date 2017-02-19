@@ -5,6 +5,7 @@ modulesNames = [
     # Views
     'views.header',
     # Controllers
+    'controllers.checker',
     'controllers.grid',
     'controllers.location',
     'controllers.smooth',
@@ -26,10 +27,10 @@ for currentModule in modulesFullNames:
 bl_info = {
     "name": "Icon Header",
     "author": "stilobique",
-    "version": (1, 2, 0),
+    "version": (1, 2, 1),
     "blender": (2, 78),
     "location": "3D View > Header",
-    "description": "Show or Hide your grid.",
+    "description": "Various new operator.",
     "warning": "",
     "wiki_url": "https://github.com/stilobique/Grid/wiki",
     "category": "3D View",
