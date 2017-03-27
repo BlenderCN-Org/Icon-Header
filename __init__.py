@@ -8,6 +8,7 @@ modulesNames = [
     'controllers.checker',
     'controllers.grid',
     'controllers.location',
+    'controllers.retopo',
     'controllers.smooth',
     ]
 

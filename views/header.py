@@ -16,6 +16,8 @@ def ui_3D(self, context):
     row = layout.row(align=True)
     icon = 'FORCE_TEXTURE'
     row.operator("unwrap.uv_checker", text='', icon=icon)
+    icon = 'EDITMODE_HLT'
+    row.operator("object.retopo_shading", text='', icon=icon)
 
 
 # -----------------------------------------------------------------------------
