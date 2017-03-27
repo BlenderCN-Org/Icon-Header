@@ -12,17 +12,14 @@ class SmoothShading(bpy.types.Operator):
         sltd_obj = context.selected_objects
         data = bpy.data
 
+
         for obj in sltd_obj:
-            # Activate Smooth Shading
-            bpy.ops.object.shade_smooth()
-            # Use auto Smooth feature
-            data.objects[obj.name].data.use_auto_smooth = True
-            # Find Mesh Name
-            mesh_name = data.objects[obj.name].data.name
-            # Convert degrees to radians
-            angle = math.radians(45)
-            # Apply angle to smooth Shading
-            bpy.data.meshes[mesh_name].auto_smooth_angle = angle
+            if obj.type == "MESH":
+                bpy.ops.object.shade_smooth()
+                data.objects[obj.name].data.use_auto_smooth = True
+                mesh_name = data.objects[obj.name].data.name
+                angle = math.radians(45)
+                bpy.data.meshes[mesh_name].auto_smooth_angle = angle
 
         return {'FINISHED'}
 
