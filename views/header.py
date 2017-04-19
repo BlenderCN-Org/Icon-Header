@@ -27,6 +27,8 @@ def ui_UV(self, context):
     layout = self.layout
     row = layout.row(align=True)
 
+    icon = 'CURSOR'
+    row.operator("unwrap.reset_cursor", text='', icon=icon)
     icon = 'FORCE_TEXTURE'
     row.operator("unwrap.uv_checker", text='', icon=icon)
 

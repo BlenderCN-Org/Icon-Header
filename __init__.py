@@ -6,6 +6,7 @@ modulesNames = [
     'views.header',
     # Controllers
     'controllers.checker',
+    'controllers.cursor_uv',
     'controllers.grid',
     'controllers.location',
     'controllers.retopo',
