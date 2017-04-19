@@ -3,7 +3,7 @@ import math
 
 
 class SmoothShading(bpy.types.Operator):
-    """Tooltip"""
+    """Activate the Auto Smooth with an 45° angle"""
     bl_idname = "object.smooth_shading"
     bl_label = "Advanced Smooth Shading"
 

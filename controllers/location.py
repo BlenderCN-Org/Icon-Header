@@ -1,7 +1,7 @@
 import bpy
 
 class CenterPivotMeshObj(bpy.types.Operator):
-    """Tooltip"""
+    """Change the object Pivot to the origin geometry"""
     bl_idname = "object.center_pivot_mesh_obj"
     bl_label = "Simple Object Operator"
 

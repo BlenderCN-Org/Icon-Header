@@ -2,7 +2,8 @@ import bpy
 
 
 class RetopoShading(bpy.types.Operator):
-    """Tooltip"""
+    """Setup the viewport to a retopo shading, activate the X-ray to the 
+    selected object and the Hidden Wire on"""
     bl_idname = "object.retopo_shading"
     bl_label = "Retopo shading"
 

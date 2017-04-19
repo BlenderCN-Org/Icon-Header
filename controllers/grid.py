@@ -1,7 +1,7 @@
 import bpy
 
 class GridControl(bpy.types.Operator):
-    """Tooltip"""
+    """Show or hide the Grid"""
     bl_idname = "view.grid_control"
     bl_label = "Show and Hide Grid"
 

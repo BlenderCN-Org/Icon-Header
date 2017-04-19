@@ -32,7 +32,7 @@ def tex_checker():
 
 
 class UVChecker(bpy.types.Operator):
-    """Tooltip"""
+    """Show a Checker map to all scene objects"""
     bl_idname = "unwrap.uv_checker"
     bl_label = "Activate an UV checker"
 
