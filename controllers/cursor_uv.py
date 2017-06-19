@@ -2,13 +2,15 @@ import bpy
 
 
 class ResetCursor(bpy.types.Operator):
-    """Insert a simple description"""
+    """Change the cursor location to 0, 0 coordinate and switch the pivot
+    use with the cursor"""
     bl_idname = "unwrap.reset_cursor"
     bl_label = "Simple Object Operator"
 
     def execute(self, context):
         bpy.context.space_data.cursor_location[0] = 0
         bpy.context.space_data.cursor_location[1] = 0
+        bpy.context.space_data.pivot_point = 'CURSOR'
 
         return {'FINISHED'}
 
